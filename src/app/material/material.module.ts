@@ -7,11 +7,10 @@ import {CdkTableModule} from '@angular/cdk/table';
 import {BrowserModule} from '@angular/platform-browser';
 import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-
 import {
   CdkTableModule,
   MatAutocompleteModule,
-  MatBadgeModule
+  MatBadgeModule,
   MatAutocompleteModule,
   MatButtonModule,
   MatBottomSheetModule,
