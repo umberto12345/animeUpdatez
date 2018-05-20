@@ -16,6 +16,10 @@ import { HeroFormComponent } from './hero-form/hero-form.component';
 
 import { FormsModule }   from '@angular/forms';
 
+
+//material module
+import { MaterialModule } from './material/material.module';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +32,8 @@ import { FormsModule }   from '@angular/forms';
   imports: [
     BrowserModule,
    AppRoutingModule,
-    FormsModule
+    FormsModule,
+    MaterialModule
 
   ],
   providers: [AuthGuard,
