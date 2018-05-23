@@ -7,7 +7,7 @@ import {NotFoundComponent} from './not-found/not-found.component';
 
 const appRoutes: Routes = [
   { path: 'login', component: LoginComponent , pathMatch:'full'},
-  { path: 'register' , component: RegisterComponent, canActivate: [AuthGuard]},
+  { path: 'register' , component: LoginComponent},
   { path: '404' , component: NotFoundComponent ,canActivate:[AuthGuard]},
 
   { path: '', redirectTo: '/login' , pathMatch: 'full'},
