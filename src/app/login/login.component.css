@@ -2,13 +2,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh; }
+  height: 100vh;
+  background: #4e555b; }
 
 .myForm {
   background: #EEEEEE;
-  height: 600px;
-  width: 345px;
-  border-radius: 3px solid #EEEEEE; }
+  height: 550px;
+  width: 320px; }
 
 .row {
   width: auto; }
@@ -18,5 +18,29 @@
 
 #userIcon {
   text-align: center; }
+
+#bottoneLogin {
+  width: 320px;
+  height: 80px;
+  position: absolute;
+  bottom: 0;
+  outline: none; }
+
+button {
+  outline: none; }
+
+/* Styles for tab labels */
+.mat-tab-label {
+  background-color: transparent;
+  color: black; }
+
+/* Styles for the active tab label */
+.mat-tab-label.mat-tab-label-active {
+  background-color: #EEEEEE;
+  color: black; }
+
+/* Styles for the ink bar */
+.mat-ink-bar {
+  background-color: green; }
 
 /*# sourceMappingURL=login.component.css.map */

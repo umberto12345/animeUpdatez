@@ -1,23 +1,47 @@
 <div class="container-fluid myCont">
 
-
+  <div class="ContAll">
       <mat-tab-group>
         <div class="row">
-        <mat-tab label="First">
+        <mat-tab label="Login">
           <div class="myForm">
-                <div class="col-12"><mat-card-title >Login</mat-card-title></div>
+                <div class="col-12"><mat-card-title >Benvenuto!</mat-card-title></div>
 
               <div class="col-12"> <mat-card-subtitle   >Divertiti su AnimeStreaming</mat-card-subtitle></div>
 
             <br>
               <mat-divider></mat-divider>
               <br>
-              <div class="col-10" id="userIcon" ><mat-icon style="font-size:84px;">account_circle</mat-icon></div>
+              <div class="col-10" id="userIcon" ><mat-icon style="font-size:96px;">account_circle</mat-icon></div>
 
-              <mat-card-content>
+              <mat-card-content  >
+
+                <form id="contLoginCard">
+                  <div  class="col-10 offset-2">
+                    <mat-form-field appearance="outline">
+                      <mat-label>Email</mat-label>
+                      <input matInput placeholder="">
+
+                    </mat-form-field>
+                  </div>
+                  <div class="col-10 offset-2"  >
+                    <mat-form-field appearance="outline">
+                      <mat-label>Password</mat-label>
+                      <input matInput placeholder="">
+
+                    </mat-form-field>
+                  </div>
+                  <div class="col-10 offset-2"><a href="#"> Password dimenticata?</a></div>
+                  <br>
+                  <div class="col-10 offset-2"> <mat-checkbox>Vuoi rimanere loggato?</mat-checkbox>
+
+                  </div>
+
+                </form>
               </mat-card-content>
 
               <mat-card-footer>
+                 <button mat-raised-button color="primary" id="bottoneLogin">Entra</button>
 
               </mat-card-footer>
 
@@ -25,10 +49,11 @@
         </mat-tab>
         </div>
 
-        <mat-tab label="Second">
+        <mat-tab label="Registrati">
 
         </mat-tab>
 
       </mat-tab-group>
+  </div>
   </div>
 
