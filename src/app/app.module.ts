@@ -10,7 +10,6 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { NotFoundComponent } from './not-found/not-found.component';
-import { HeroFormComponent } from './hero-form/hero-form.component';
 
 //form module
 
@@ -27,7 +26,6 @@ import { MaterialModule } from './material/material.module';
     RegisterComponent,
     NavbarComponent,
     NotFoundComponent,
-    HeroFormComponent
   ],
   imports: [
     BrowserModule,

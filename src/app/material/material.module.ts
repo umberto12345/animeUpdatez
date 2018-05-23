@@ -4,22 +4,18 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import {CdkTableModule} from '@angular/cdk/table';
-import {BrowserModule} from '@angular/platform-browser';
-import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {
-  CdkTableModule,
   MatAutocompleteModule,
   MatBadgeModule,
-  MatAutocompleteModule,
-  MatButtonModule,
   MatBottomSheetModule,
+  MatButtonModule,
   MatButtonToggleModule,
   MatCardModule,
   MatCheckboxModule,
   MatChipsModule,
   MatDatepickerModule,
   MatDialogModule,
+  MatDividerModule,
   MatExpansionModule,
   MatGridListModule,
   MatIconModule,
@@ -38,22 +34,21 @@ import {
   MatSlideToggleModule,
   MatSnackBarModule,
   MatSortModule,
+  MatStepperModule,
   MatTableModule,
   MatTabsModule,
   MatToolbarModule,
   MatTooltipModule,
-  MatStepperModule,
+  MatTreeModule,
 
 } from '@angular/material';
 
 @NgModule({
   imports: [
     CommonModule,
-    BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
     HttpClientModule,
-    DemoMaterialModule,
     MatNativeDateModule,
     ReactiveFormsModule
 
@@ -63,9 +58,9 @@ import {
   exports: [
     CdkTableModule,
     MatAutocompleteModule,
-    MatButtonModule,
     MatBadgeModule,
     MatBottomSheetModule,
+    MatButtonModule,
     MatButtonToggleModule,
     MatCardModule,
     MatCheckboxModule,
@@ -73,6 +68,7 @@ import {
     MatStepperModule,
     MatDatepickerModule,
     MatDialogModule,
+    MatDividerModule,
     MatExpansionModule,
     MatGridListModule,
     MatIconModule,
@@ -95,6 +91,7 @@ import {
     MatTabsModule,
     MatToolbarModule,
     MatTooltipModule,
+    MatTreeModule,
   ]
 
 })
