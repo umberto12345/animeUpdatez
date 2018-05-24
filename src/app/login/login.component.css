@@ -32,7 +32,8 @@ button {
 /* Styles for tab labels */
 .mat-tab-label {
   background-color: transparent;
-  color: black; }
+  color: black;
+  width: 160px; }
 
 /* Styles for the active tab label */
 .mat-tab-label.mat-tab-label-active {
