@@ -3,6 +3,7 @@ import { NgModule ,NO_ERRORS_SCHEMA} from '@angular/core';
 import {AuthGuard} from './auth.guard';
 import { AuthInterceptor } from './auth.interceptor';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -31,7 +32,8 @@ import { MaterialModule } from './material/material.module';
     BrowserModule,
    AppRoutingModule,
     FormsModule,
-    MaterialModule
+    MaterialModule,
+    BrowserAnimationsModule
 
   ],
   providers: [AuthGuard,

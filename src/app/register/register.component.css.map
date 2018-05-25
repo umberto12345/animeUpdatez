@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "",
-"sources": [],
+"mappings": "AAAA,SAAS;EAEP,OAAO,EAAE,YAAY;EACrB,WAAW,EAAC,kBAAkB",
+"sources": ["register.component.scss"],
 "names": [],
 "file": "register.component.css"
 }

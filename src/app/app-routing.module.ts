@@ -6,11 +6,12 @@ import {AuthGuard} from './auth.guard';
 import {NotFoundComponent} from './not-found/not-found.component';
 
 const appRoutes: Routes = [
-  { path: 'login', component: LoginComponent , pathMatch:'full'},
-  { path: 'register' , component: LoginComponent},
+  { path: 'login', component: LoginComponent , pathMatch:'full' },
+  { path: 'register', component: LoginComponent , pathMatch:'full' },
+
   { path: '404' , component: NotFoundComponent ,canActivate:[AuthGuard]},
 
-  { path: '', redirectTo: '/login' , pathMatch: 'full'},
+  { path: '', redirectTo: 'home/login' , pathMatch: 'full'},
   { path: '**', redirectTo: '404' , pathMatch: 'full'}
 
 

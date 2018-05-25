@@ -13,39 +13,49 @@
 
     <form>
       <!-- Email -->
-      <div  class="col-10 offset-2">
+      <div  class="col-11  offset-1">
         <mat-form-field appearance="outline">
           <mat-label>Email</mat-label>
-          <input matInput placeholder="">
-
+          <input matInput placeholder="Inserisci nuova Email">
+          <mat-icon matSuffix
+          >email</mat-icon>
         </mat-form-field>
       </div>
+
       <!-- Username -->
-      <div  class="col-10 offset-2">
+      <div  class="col-11 offset-1">
         <mat-form-field appearance="outline">
           <mat-label>Username</mat-label>
-          <input matInput placeholder="">
+          <input matInput placeholder="inserisci nuovo Username">
+          <mat-icon matSuffix
+                    matTooltip="L'Username puo contenere solo caratteri  e numeri interi (esclusi i caratteri accentati)   "
+          >account_box</mat-icon>
 
         </mat-form-field>
       </div>
 
       <!-- Password -->
-      <div  class="col-10 offset-2">
+      <div  class="col-11 offset-1">
         <mat-form-field appearance="outline">
           <mat-label>Password</mat-label>
-          <input matInput placeholder="">
+          <input matInput placeholder="Inserisci nuova Password">
+          <mat-icon matSuffix
+                    matTooltip="Inserisci una password con almeno una lettera maiuscola  e un numero  "     >info</mat-icon>
 
         </mat-form-field>
+
       </div>
     <!-- Conferma password -->
-      <div  class="col-10 offset-2">
+      <div  class="col-11 offset-1">
         <mat-form-field appearance="outline">
           <mat-label>Conferma Password</mat-label>
-          <input matInput placeholder="">
+          <input matInput placeholder="Conferma nuova Password" [type]="hide ? 'password' : 'text'">
+          <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+
 
         </mat-form-field>
       </div>
-      <div class="col-10 offset-2"> <mat-checkbox><div style="font-size:10px;">Accetto i diritti della privacy e policy.</div></mat-checkbox>
+      <div class="col-11 offset-1"> <mat-checkbox><div style="font-size:10px;">Accetto i diritti della privacy e policy.</div></mat-checkbox>
       </div>
     </form>
 
