@@ -2,23 +2,23 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {LoginComponent} from './login/login.component';
 import {RegisterComponent} from './register/register.component';
-import {AuthGuard} from './auth.guard';
+import {AuthGuard} from './guard';
 import {NotFoundComponent} from './not-found/not-found.component';
+import {TestComponent} from './test/test.component';
 
 const appRoutes: Routes = [
-  { path: 'login', component: LoginComponent , pathMatch:'full' },
-  { path: 'register', component: LoginComponent , pathMatch:'full' },
 
-  { path: '404' , component: NotFoundComponent ,canActivate:[AuthGuard]},
+  { path: 'login', component: LoginComponent  },
+  { path: 'register', component: LoginComponent },
+  { path: 'test/y', component: TestComponent },
+  { path: '404' , component: NotFoundComponent , canActivate: [AuthGuard]},
 
-  { path: '', redirectTo: 'home/login' , pathMatch: 'full'},
-  { path: '**', redirectTo: '404' , pathMatch: 'full'}
 
 
 
 ];
 @NgModule({
   imports: [RouterModule.forRoot(appRoutes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class AppRoutingModule { }

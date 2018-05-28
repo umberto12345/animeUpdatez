@@ -1,17 +1,19 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule ,NO_ERRORS_SCHEMA} from '@angular/core';
-import {AuthGuard} from './auth.guard';
-import { AuthInterceptor } from './auth.interceptor';
-import { HTTP_INTERCEPTORS } from '@angular/common/http';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+//http module
+import { HttpClientModule,HTTP_INTERCEPTORS } from '@angular/common/http';
 
+import {AuthGuard} from './guard';
+import {AuthInterceptor} from './helper';
+import { ReactiveFormsModule }    from '@angular/forms';
+
+import { NgModule ,NO_ERRORS_SCHEMA} from '@angular/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { NotFoundComponent } from './not-found/not-found.component';
-
 //form module
 
 import { FormsModule }   from '@angular/forms';
@@ -20,6 +22,9 @@ import { FormsModule }   from '@angular/forms';
 //material module
 import { MaterialModule } from './material/material.module';
 
+import {AuthService} from './auth.service';
+import { TestComponent } from './test/test.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,20 +32,24 @@ import { MaterialModule } from './material/material.module';
     RegisterComponent,
     NavbarComponent,
     NotFoundComponent,
+    TestComponent,
+
   ],
   imports: [
     BrowserModule,
-   AppRoutingModule,
+    ReactiveFormsModule,
+
+    AppRoutingModule,
     FormsModule,
     MaterialModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
 
   ],
-  providers: [AuthGuard,
+  providers: [AuthGuard,AuthService,
     {
       provide: HTTP_INTERCEPTORS,
-      useClass : AuthInterceptor,
-      multi : true
+      useClass: AuthInterceptor,
+      multi: true
     }],
   bootstrap: [AppComponent],
   schemas: [ NO_ERRORS_SCHEMA ]

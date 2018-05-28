@@ -22,18 +22,18 @@
 
               <mat-card-content  >
 
-                <form id="contLoginCard">
+                <form id="contLoginCard" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
                   <div  class="col-10 offset-2">
                     <mat-form-field appearance="outline">
                       <mat-label>Email</mat-label>
-                      <input matInput placeholder="">
+                      <input matInput formControlName="email">
 
                     </mat-form-field>
                   </div>
                   <div class="col-10 offset-2"  >
                     <mat-form-field appearance="outline">
                       <mat-label>Password </mat-label>
-                      <input  matInput placeholder="" name="url">
+                      <input  matInput type="text" formControlName="password">
                     </mat-form-field>
                   </div>
                   <div class="col-10 offset-2"><a href="#" style="color: #DD2C00;"> Password dimenticata?</a></div>
@@ -41,13 +41,13 @@
                   <div class="col-10 offset-2"> <mat-checkbox>Vuoi rimanere loggato?</mat-checkbox>
 
                   </div>
+                  <button [disabled]="loading" mat-raised-button	 style="background:#DD2C00
+;" id="bottoneLogin" >Entra</button>
 
                 </form>
               </mat-card-content>
 
               <mat-card-footer style="border-radius:10px solid red;">
-                 <button mat-raised-button	 style="background:#DD2C00
-;" id="bottoneLogin">Entra</button>
 
               </mat-card-footer>
 
