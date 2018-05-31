@@ -1,6 +1,4 @@
 
- export  class Users {
-  id:number;
-titolo:string;
-autore:string;
+ export  interface Users {
+  role:number;
  }

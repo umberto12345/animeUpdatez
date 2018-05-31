@@ -24,6 +24,9 @@ import { MaterialModule } from './material/material.module';
 
 import {AuthService} from './auth.service';
 import { TestComponent } from './test/test.component';
+import {AdminGuard} from './guard/admin.guard';
+import {AdminInterceptor} from './helper/admin.interceptor';
+import { AdminComponent } from './admin/admin.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +36,7 @@ import { TestComponent } from './test/test.component';
     NavbarComponent,
     NotFoundComponent,
     TestComponent,
-
+    AdminComponent,
   ],
   imports: [
     BrowserModule,
@@ -45,11 +48,16 @@ import { TestComponent } from './test/test.component';
     BrowserAnimationsModule,
 
   ],
-  providers: [AuthGuard,AuthService,
+  providers: [AuthGuard,AuthService,AdminGuard,
     {
       provide: HTTP_INTERCEPTORS,
       useClass: AuthInterceptor,
       multi: true
+    },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass:AdminInterceptor,
+      multi:true
     }],
   bootstrap: [AppComponent],
   schemas: [ NO_ERRORS_SCHEMA ]

@@ -10,11 +10,15 @@ import {Users} from './users';
 export class TestComponent implements OnInit {
 
 
-  users: Users[];
 
-  constructor() {
+  constructor(private loginService: AuthService) { }
+
+  ngOnInit() {
+
+
   }
 
-  ngOnInit() {}
-}
 
+
+
+}

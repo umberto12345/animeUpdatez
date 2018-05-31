@@ -4,7 +4,7 @@ import {Location} from '@angular/common';
 import {AuthService} from '../auth.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { first } from 'rxjs/operators';
-
+import{Utente} from '../utente';
 
 @Component({
   selector: 'app-login',
@@ -23,6 +23,7 @@ export class LoginComponent implements OnInit {
   submitted = false;
   returnUrl: string;
   error = '';
+  tempVar;
 
   constructor(           private route: ActivatedRoute,
                          private formBuilder: FormBuilder,private router:Router, private  location: Location,private auth: AuthService) {
@@ -88,12 +89,27 @@ export class LoginComponent implements OnInit {
       .pipe(first())
       .subscribe(
         data => {
-          this.router.navigate([this.returnUrl]);
+          console.log("Data" + data);
+          this.tempVar = data;
+
         },
         error => {
           this.error = error;
           this.loading = false;
           console.log("errore" +           this.f.email.value) ;
+        },
+        () => {
+          console.log(this.tempVar);
+          if(this.tempVar === 0) {
+            this.router.navigate(["/admin"]);
+
+          }
+          if (this.tempVar === 1) {
+            console.log("stronzo");
+
+            this.router.navigate(["/test/y"]);
+          }
+
         });
   }
 
